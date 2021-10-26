@@ -107,4 +107,3 @@ const cardsList = [
 		family: 'fas'
 	}
 ];
-alert('ciao');
