@@ -1,0 +1,16 @@
+/* reste rules */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* common rules */
+
+/**********
+main  
+**********/
+main {
+    background-color: #dddddd;
+    height: 500px;
+}
