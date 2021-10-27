@@ -111,7 +111,7 @@ const cardsList = [
 const containerRef = document.getElementById('container');
 
 
-cardsList.forEach((item) =>{
+cardsList.forEach((item) => {
 	const card = `<div class="card col-2">
 					<div>
 						<i class="icon ${item.type} ${item.family} ${item.prefix}${item.name}"></i>
@@ -119,5 +119,45 @@ cardsList.forEach((item) =>{
 					</div>
 				</div>`;
 	containerRef.innerHTML += card;
-	console.log(item.name);
-} )
+	//console.log(item.name);
+});
+
+const filter = document.getElementById('filter_button');
+filter.addEventListener('click', function() {
+	const type = document.getElementById('type_filter');
+	//console.log(type.value);
+	
+	const filteredTypes = [];
+	cardsList.forEach((item, index) => {
+		if (type.value == item.type) {
+			filteredTypes.push(index);
+		}
+		else if (type.value == 'all') {
+			filteredTypes.push(index);
+		}
+	});
+
+	const filteredElement = cardsList.filter((element, index) => {
+		return filteredTypes.includes(index);
+	})
+	console.log(filteredTypes)
+	console.log(filteredElement)
+
+	containerRef.innerHTML = null;
+
+	filteredElement.forEach((item) => {
+		const card = `<div class="card col-2">
+						<div>
+							<i class="icon ${item.type} ${item.family} ${item.prefix}${item.name}"></i>
+							<h3 class="item">${item.name}</h3>
+						</div>
+					</div>`;
+		containerRef.innerHTML += card;
+		//console.log(item.name);
+	});
+
+})
+const typeSelection = cardsList.filter((element) => {
+	
+})
+
