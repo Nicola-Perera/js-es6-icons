@@ -114,7 +114,7 @@ const containerRef = document.getElementById('container');
 cardsList.forEach((item) =>{
 	const card = `<div class="card col-2">
 					<div>
-						<i class="icon ${item.family} ${item.prefix}${item.name}"></i>
+						<i class="icon ${item.type} ${item.family} ${item.prefix}${item.name}"></i>
 						<h3 class="item">${item.name}</h3>
 					</div>
 				</div>`;

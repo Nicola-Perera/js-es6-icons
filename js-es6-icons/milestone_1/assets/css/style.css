@@ -35,3 +35,14 @@ h3 {
 .card > div {
     text-align: center;
 }
+
+/* types color */
+.animal {
+    color: #0000FF;
+}
+.vegetable {
+    color: #FFA500;
+}
+.user {
+    color: #800080;
+}
