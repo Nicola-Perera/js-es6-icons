@@ -107,3 +107,17 @@ const cardsList = [
 		family: 'fas'
 	}
 ];
+
+const containerRef = document.getElementById('container');
+
+
+cardsList.forEach((item) =>{
+	const card = `<div class="card col-2">
+					<div>
+						<i class="icon ${item.family} ${item.prefix}${item.name}"></i>
+						<h3 class="item">${item.name}</h3>
+					</div>
+				</div>`;
+	containerRef.innerHTML += card;
+	console.log(item.name);
+} )
